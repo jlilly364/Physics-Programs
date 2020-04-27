@@ -163,20 +163,16 @@ def SmallFishing(central,buffer=.001,step=0.0005):
 
 # Plot of final eigenenergy wavefunctions
 def FinalPlot():
-    #x1,y1 = Solver(0.001,10.0,27.268,True)
-    #x2,y2 = Solver(0.001,10.0,40.728,False)
-    #x3,y3 = Solver(0.001,10.0,55.003,True)
-    #x4,y4 = Solver(0.001,10.0,69.935,False)
     E1 = 1.5907
     E2 = 3.6515
     E3 = 7.5275
     E4 = 8.6222
-    #x1,y1 = Solver(0.001,15.0,1.5907,True)
-    #x2,y2 = Solver(0.001,15.0,3.6515,False)
+    x1,y1 = Solver(0.001,15.0,1.5907,True)
+    x2,y2 = Solver(0.001,15.0,3.6515,False)
     #x3,y3 = Solver(0.001,15.0,8.6217,False)
     x4,y4 = Solver(0.001,15.0,8.6222,False)
-    #plt.plot(x1,y1,label=r'E$_1$ = {0} eV'.format(E1))
-    #plt.plot(x2,y2,label=r'E$_2$ = {0} eV'.format(E2))
+    plt.plot(x1,y1,label=r'E$_1$ = {0} eV'.format(E1))
+    plt.plot(x2,y2,label=r'E$_2$ = {0} eV'.format(E2))
     #plt.plot(x3,y3,label=r'E$_3$ = {0} eV'.format(E4))
     plt.plot(x4,y4,label=r'E$_4 = ${0} eV'.format(E4))
     plt.legend()
@@ -186,6 +182,7 @@ def FinalPlot():
     plt.xlabel(r'Distance ($\AA$)')
     plt.ylabel(r'$\psi$(x)')
     plt.title('Wavefunction for Linear Potential')
+    plt.savefig('C:/Users/Jimmy/Physics-Programs/Linear Half Potential Energies')
     plt.show()
 
 FinalPlot()
