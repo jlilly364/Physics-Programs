@@ -162,7 +162,7 @@ def SmallFishing(central,buffer=.001,step=0.0005):
 #SmallFishing(7.5275)
 
 # Plot of final eigenenergy wavefunctions
-def FinalPlot():
+def FinalPlot(save=False):
     E1 = 1.5907
     E2 = 3.6515
     E3 = 7.5275
@@ -182,7 +182,8 @@ def FinalPlot():
     plt.xlabel(r'Distance ($\AA$)')
     plt.ylabel(r'$\psi$(x)')
     plt.title('Wavefunction for Linear Potential')
-    plt.savefig('C:/Users/Jimmy/Physics-Programs/Linear Half Potential Energies')
+    if save == True:
+        plt.savefig('C:/Users/Jimmy/Physics-Programs/Linear Half Potential Energies')
     plt.show()
 
 FinalPlot()
