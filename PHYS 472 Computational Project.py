@@ -166,15 +166,15 @@ def FinalPlot(save=False):
     E1 = 1.5907
     E2 = 3.6515
     E3 = 7.5275
-    E4 = 8.6222
+    E4 = 8.6217
     x1,y1 = Solver(0.001,15.0,1.5907,True)
     x2,y2 = Solver(0.001,15.0,3.6515,False)
-    #x3,y3 = Solver(0.001,15.0,8.6217,False)
-    x4,y4 = Solver(0.001,15.0,8.6222,False)
+    x3,y3 = Solver(0.001,15.0,E4,True)
+    x4,y4 = Solver(0.001,15.0,E4,False)
     plt.plot(x1,y1,label=r'E$_1$ = {0} eV'.format(E1))
     plt.plot(x2,y2,label=r'E$_2$ = {0} eV'.format(E2))
-    #plt.plot(x3,y3,label=r'E$_3$ = {0} eV'.format(E4))
-    plt.plot(x4,y4,label=r'E$_4 = ${0} eV'.format(E4))
+    plt.plot(x3,y3,label=r'E$_3$ (even) = {0} eV'.format(E4))
+    plt.plot(x4,y4,label=r'E$_3$ (odd) = {0} eV'.format(E4))
     plt.legend()
     plt.xlim(0,15)
     plt.ylim(-1.5,1.5)
@@ -186,4 +186,4 @@ def FinalPlot(save=False):
         plt.savefig('C:/Users/Jimmy/Physics-Programs/Linear Half Potential Energies')
     plt.show()
 
-FinalPlot()
+FinalPlot(True)
